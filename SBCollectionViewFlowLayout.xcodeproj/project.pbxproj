@@ -15,6 +15,7 @@
 		0BE884D21D65B756004E3053 /* SBCollectionViewFlowLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE884D11D65B756004E3053 /* SBCollectionViewFlowLayoutUITests.swift */; };
 		0BE884E01D65B778004E3053 /* SBCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE884DF1D65B778004E3053 /* SBCollectionViewFlowLayout.swift */; };
 		0BE884E21D65B7B0004E3053 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE884E11D65B7B0004E3053 /* CollectionViewController.swift */; };
+		F69141FB1EA7A2B700E5B993 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69141FA1EA7A2B700E5B993 /* NumberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0BE884D31D65B756004E3053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE884DF1D65B778004E3053 /* SBCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		0BE884E11D65B7B0004E3053 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F69141FA1EA7A2B700E5B993 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,11 @@
 		0BE884B01D65B756004E3053 /* SBCollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				0BE884B11D65B756004E3053 /* AppDelegate.swift */,
 				0BE884DF1D65B778004E3053 /* SBCollectionViewFlowLayout.swift */,
 				0BE884E11D65B7B0004E3053 /* CollectionViewController.swift */,
+				F69141FA1EA7A2B700E5B993 /* NumberCell.swift */,
 				0BE884B51D65B756004E3053 /* Main.storyboard */,
-				0BE884B81D65B756004E3053 /* Assets.xcassets */,
-				0BE884BA1D65B756004E3053 /* LaunchScreen.storyboard */,
-				0BE884BD1D65B756004E3053 /* Info.plist */,
+				F69141F91EA7A09600E5B993 /* SupportingFile */,
 			);
 			path = SBCollectionViewFlowLayout;
 			sourceTree = "<group>";
@@ -126,6 +126,17 @@
 				0BE884D31D65B756004E3053 /* Info.plist */,
 			);
 			path = SBCollectionViewFlowLayoutUITests;
+			sourceTree = "<group>";
+		};
+		F69141F91EA7A09600E5B993 /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				0BE884B11D65B756004E3053 /* AppDelegate.swift */,
+				0BE884B81D65B756004E3053 /* Assets.xcassets */,
+				0BE884BA1D65B756004E3053 /* LaunchScreen.storyboard */,
+				0BE884BD1D65B756004E3053 /* Info.plist */,
+			);
+			name = SupportingFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = c0ming;
 				TargetAttributes = {
 					0BE884AD1D65B756004E3053 = {
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69141FB1EA7A2B700E5B993 /* NumberCell.swift in Sources */,
 				0BE884E21D65B7B0004E3053 /* CollectionViewController.swift in Sources */,
 				0BE884E01D65B778004E3053 /* SBCollectionViewFlowLayout.swift in Sources */,
 				0BE884B21D65B756004E3053 /* AppDelegate.swift in Sources */,
@@ -340,6 +352,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -362,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,6 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -406,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -421,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EN688WKP8K;
 				INFOPLIST_FILE = SBCollectionViewFlowLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.c0ming.SBCollectionViewFlowLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EN688WKP8K;
 				INFOPLIST_FILE = SBCollectionViewFlowLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.c0ming.SBCollectionViewFlowLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";

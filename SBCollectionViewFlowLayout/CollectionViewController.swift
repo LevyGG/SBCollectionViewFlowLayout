@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "NumberCell_ReuseID"
 
 class CollectionViewController: UICollectionViewController, SBCollectionViewDelegateFlowLayout {
 
@@ -20,32 +20,39 @@ class CollectionViewController: UICollectionViewController, SBCollectionViewDele
         self.collectionView?.alwaysBounceVertical = true
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 6
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else if section == 1 {
-            return 0
-        } else if section == 2 {
+        
+        switch section {
+        case 0:
+            return 2
+        case 1:
+            return 5
+        case 2:
+            return 8
+        case 3:
             return 12
+        case 4:
+            return 20
+        case 5:
+            return 33
+        default:
+            return 59
         }
-        return 19
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell:NumberCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NumberCell
     
         cell.backgroundColor = UIColor.groupTableViewBackground
-    
+        cell.Number_Label.text = String(indexPath.row)
+        
         return cell
     }
 
@@ -55,13 +62,23 @@ class CollectionViewController: UICollectionViewController, SBCollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, backgroundColorForSectionAt section: Int) -> UIColor {
-        if section == 0 {
+
+        
+        switch section {
+        case 0:
             return UIColor.red
-        } else if section == 1 {
-            return UIColor.yellow
-        } else if section == 2 {
-            return UIColor.brown.withAlphaComponent(0.8)
+        case 1:
+            return UIColor.orange
+        case 2:
+            return UIColor.brown
+        case 3:
+            return UIColor.init(colorLiteralRed: 0.3, green: 0.34, blue: 0.41, alpha: 1.0)
+        case 4:
+            return UIColor.lightGray
+        case 5:
+            return UIColor.green
+        default:
+            return UIColor.black
         }
-        return UIColor.blue
     }
 }
